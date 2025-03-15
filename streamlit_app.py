@@ -23,7 +23,17 @@ with st.form("user_form"):
 
 # Display output after submission
 if submitted:
+    
     if name and gender != "Select an option":
         st.success(f"✅ Form submitted!\n\n**Name:** {name}\n**Age:** {age}\n**Gender:** {gender}")
+        
+        st.write("⭐ **App rating:**", Rating)
+        st.write("💬 **Additional Feedback:**", Feedback)
+
+        if Rating <= 2:
+            st.warning("Thank you for your feedback. We'll work to improve.")
+        elif Rating >= 4:
+            st.success("Thank you, we're happy you enjoyed the app!")
+
     else:
         st.warning("⚠️ Please fill out all fields correctly.")
