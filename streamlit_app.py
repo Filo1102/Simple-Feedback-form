@@ -25,10 +25,10 @@ with st.form("user_form"):
 if submitted:
     
     if name and gender != "Select an option":
-        st.success(f"✅ Form submitted!\n\n**Name:** {name}\n**Age:** {age}\n**Gender:** {gender}")
+        st.success(f"Form submitted!\n\n**Name:** {name}\n**Age:** {age}\n**Gender:** {gender}")
         
-        st.write("⭐ **App rating:**", Rating)
-        st.write("💬 **Additional Feedback:**", Feedback)
+        st.write("**App rating:**", Rating)
+        st.write("**Additional Feedback:**", Feedback)
 
         if Rating <= 2:
             st.warning("Thank you for your feedback. We'll work to improve.")
@@ -36,4 +36,4 @@ if submitted:
             st.success("Thank you, we're happy you enjoyed the app!")
 
     else:
-        st.warning("⚠️ Please fill out all fields correctly.")
+        st.warning("Please fill out all fields correctly.")
